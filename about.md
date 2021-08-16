@@ -1,18 +1,15 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
-<p class="message">
-  Hi there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Some information about you!
 
-## About BlackDoc Theme
+### More Information
 
-Some relevant information about this project:
+A place to include any other types of information that you'd like to include about yourself.
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Theme based on [Poole](http://getpoole.com), the Jekyll butler, and the [Hyde](http://hyde.getpoole.com) theme
-* Ideal for sites requiring master-detail layout such as documentation, cheatsheets, lyrics, notes, etc.
-* Need a beautiful color scheme for black background? Then you will love BlackDoc theme.
+### Contact me
 
+[email@domain.com](mailto:email@domain.com)

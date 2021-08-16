@@ -1,126 +1,99 @@
-# BlackDoc
+# minimal-bootstrap-blog
 
-![Jekyll version](https://img.shields.io/badge/Jekyll-3.x-brightgreen.svg?style=flat-square)
+## Introduction
 
-BlackDoc is a two-column [Jekyll](http://jekyllrb.com) theme that's ideal for websites that require a master-detail layout for viewing of content. It's based on [Poole](http://getpoole.com), the Jekyll butler, and the [Hyde](http://hyde.getpoole.com) theme.
+![minimal-bootstrap-blog dark mode homepage](https://user-images.githubusercontent.com/13270895/126380100-f61f3464-1604-486c-89ac-5a7b98fe3ce7.png)
+![minimal-bootstrap-blog light mode homepage](https://user-images.githubusercontent.com/13270895/126380111-35619141-0e9d-4780-a2c9-1c8992497f56.png)
+![minimal-bootstrap-blog mobile homepages](https://user-images.githubusercontent.com/13270895/126383023-8fa01fd7-544b-459d-956e-4a67a735758b.png)
 
-![BlackDoc screenshot](https://raw.githubusercontent.com/karloespiritu/blackdoc/master/public/images/blackdoc-screenshot.jpg)
+minimal-bootstrap-blog is a no frills, fully-responsive, hyper-minimalistic dark/light theme made with bootstrap-dark-5: https://github.com/vinorodrigues/bootstrap-dark-5. The theme is heavily inspired by Mark Otto's personal site: https://markdotto.com/
 
-## Contents
+Demo: https://andrewhwanpark.github.io/minimal-bootstrap-blog/
 
-- [Features](#features)
-- [Quick Start](#quick-start)
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Scrolling sidebar content](#scrolling-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
-- [Thanks](#thanks)
+My personal site that uses the same theme: https://andrewhwanpark.github.io/
 
-## Features
+#### Features
 
-* Now compatible with Jekyll 3.x
-* Two-column layout with scrolling sidebar content
-* Ideal for websites that require  master-detail view of content
+- Automatically changes from dark/light modes depending on the OS settings.
+- Easy integration with Google Analytics.
+- Generates XML sitemap and RSS Atom feed.
+- jekyll-seo-tag to add metadata tags for search engines and social networks to better index and display your site's content.
+- Full markdown support: code blocks and tables are automatically bootstrap components.
 
-## Quick Start
+![code blocks](https://user-images.githubusercontent.com/13270895/126393675-dacc65f1-7dd2-4651-ae2b-0e77eda7cd11.png)
 
-Download the zip file or clone the BlackDoc repo.
+![tables](https://user-images.githubusercontent.com/13270895/126393680-7b7fae57-abd0-4843-a9a1-c4f334b5eaa4.png)
 
-```bash
-$ git clone git@github.com:karloespiritu/BlackDoc.git mysite
-$ cd mysite
-```
-Make sure you have Ruby 2.2.5 or higher installed.
+## Installation
 
-```bash
-$ ruby --version
-ruby 2.2.5
-```
+Clone this repo:
 
-Install bundler and install dependencies.
+    $ git clone https://github.com/andrewhwanpark/minimal-bootstrap-blog.git
 
-```bash
-$ gem install bundler
-$ bundle install
-```
+If you haven't already, install bundler:
 
-Build and run your BlackDoc site.
+    $ gem install bundler
 
-```bash
-$ jekyll serve
-```
+And then execute:
+
+    $ bundle install
+
+Serve the site:
+
+    $ bundle exec jekyll serve
+
+# Installation with Github Pages
+
+After cloning the repo, checkout to the gh-pages branch.
+
+    $ git checkout gh-pages && git pull
+
+In the directory:
+
+    $ bundle install
+
+For local development:
+
+    $ bundle exec jekyll serve
+
+After tweaking with it, you can publish the site. Under your repository name, click Settings.
+
+![tutorial](https://docs.github.com/assets/images/help/repository/repo-actions-settings.png)
+
+In the left sidebar, click Pages.
+
+![tutorial 2](https://docs.github.com/assets/images/help/pages/pages-tab.png)
+
+To see your published site, under "GitHub Pages", click your site's URL.
+
+![tutorial 3](https://docs.github.com/assets/images/help/pages/click-pages-url-to-preview.png)
+
+For a more detailed guide, visit this guide by Github: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
 
 ## Usage
 
-BlackDoc is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+### First things first: \_config.yml
 
+First, you should change data in \_config.yml to the appropriate information such as your social links for the footer icons, avatar for navbar logo, title and name of the site, and more crucial information.
 
-## Options
+### Adding content
 
-BlackDoc includes some customizable options, typically applied via classes on the `<body>` element.
+In order to add permanent pages, add in similar fashion to about.md and portfolio.md and add apppropriate data to \_data/navigation.yml.
 
+In order to add blog posts, add in similar fashion to \_posts/2021-07-16-this-post-demonstrates-post-content-styles.md.
 
-### Sidebar menu
+### Custom style changes
 
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+If you wish to add custom styling through SCSS or CSS, you can add or edit \_sass/main.scss.
 
-```
----
-layout: page
-title: About
----
-```
+### Custom domains with Github Pages
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+Follow this simple guide: https://medium.com/@xiang_zhou/how-to-add-custom-domain-to-your-jekyll-blog-provided-that-you-built-your-site-using-github-6e1c8bf20afe
 
+## Contributing
 
-### Scrolling sidebar content
-
-By default, BlackDoc includes a scrolling sidebar that will display your markdown files in alphabetical order.
-
-### Themes
-
-BlackDoc ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/karloespiritu/blackdoc/blob/master/public/css/blackdoc.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-### Reverse layout
-
-![BlackDoc reverse screenshot](https://raw.githubusercontent.com/karloespiritu/BlackDoc/master/public/images/reverse-screenshot.png)
-
-BlackDoc's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-## Author
-
-**Karlo Espiritu**
-- <https://github.com/karloespiritu>
-- <https://twitter.com/karloespiritu>
+Bug reports and pull requests are welcome on GitHub at https://github.com/andrewhwanpark/minimal-bootstrap-blog.
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md).
-
-\m/
-
-## Thanks
-
-Thanks to [@mdo](https://twitter.com/mdo) for creating the awesome [Poole](http://getpoole.com) project.
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
